@@ -6,22 +6,31 @@
     <title>Index</title>
 </head>
 <body>
-   <form action="./server.php" method="POST">
-
-    <textarea name="message" id="message" placeholder="Scrivi qui il tuo messaggio "></textarea>
-    <input type="submit" value="Invia">
-
-
-
-
-
-   </form>
+    
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <form action="./server.php" method="POST">
+             <textarea name="message" id="message" placeholder="Scrivi qui il tuo messaggio "></textarea>
+             <input type="text" name="word" placeholder="Inserisci la parola da censurare ">
+             <input type="submit" value="Invia">
+            </form>
+        </div>
+    </div>
+</div>
     
 </body>
 </html>
-<?php
 
+<style>
+    .container{
+        margin: 0 auto;
+        width: 950px;
 
-
-
-?>
+    }
+    
+    .col-6{
+        width: calc(6 * 100 / 12);
+        
+    }
+</style>
