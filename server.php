@@ -2,8 +2,10 @@
 $message = $_POST['message'];
 $word = $_POST['word'];
 $message_length = strlen($message);
-$new_message = str_replace($word, '***', $message);
+$new_message = str_replace($word, '***', $message) ;
 $new_message_length = strlen($new_message);
+$word_count = substr_count($new_message, '***');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +19,7 @@ $new_message_length = strlen($new_message);
     <h1>Questa é la lunghezza del messaggio : <?php echo $message_length;?></h1>
     <h1>Qui trovi il paragrafo censurato :<p><?php echo $new_message;?></p></h1>
     <h1>Questa é la lungheza del nuovo paragrafo censurato :<?php echo $new_message_length;?></h1>
+    <h1>Questo é il numero di volte che la parola viene censurata :<?php echo $word_count; ?></h1>
 
     
 </body>
